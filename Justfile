@@ -35,7 +35,7 @@ lint:
 	cargo doc # will fail if there's link issues etc
 	cargo +nightly udeps --all-targets
 	# ideally wouldn't use --direct
-	#cargo minimal-versions check --direct --workspace # check it builds with the min versions of all the deps (from their semver ranges)
+	cargo minimal-versions check --direct --workspace # check it builds with the min versions of all the deps (from their semver ranges)
 
 test: lint
 	cargo test --all
@@ -62,7 +62,7 @@ build: test
 	cargo build
 
 build-ci *ARGS:
-	cargo build --bin zip --release {{ARGS}}
+	cargo build --release {{ARGS}}
 
 package: #test
 	rm -rf ./packages/

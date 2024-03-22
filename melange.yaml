@@ -1,7 +1,7 @@
 package:
   name: mt-ext-authz-grpc
   epoch: 2
-  version: 36cd242-dirty
+  version: 5eec7d4-dirty
   description: Example Envoy ext_authz
   url: https://github.com/mt-inside/TODO
   copyright:
